@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="openglSystem">
+      <UniqueIdentifier>{7d6b6e9d-5d6c-4d9e-95f9-fdf77c8d7a89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{648bd793-30ee-45c6-a29b-38e8fb0b0122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="programs">
+      <UniqueIdentifier>{84ca3145-dae6-481f-9fe3-55aac3a8b0c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="structs">
+      <UniqueIdentifier>{2c24b0c8-c847-461a-843b-70dd773f1eb8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="openGLSystem\OpenglSystem.cpp">
+      <Filter>openglSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\easylogging++.cc">
+      <Filter>vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MngrProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MngrTexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\stb_image.cpp">
+      <Filter>vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="LdrTexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LdrModelObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="openGLSystem\OpenglSystem.h">
+      <Filter>openglSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\easylogging++.h">
+      <Filter>vendor</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MngrProgram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MngrTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\stb_image.h">
+      <Filter>vendor</Filter>
+    </ClInclude>
+    <ClInclude Include="LdrTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LdrModelObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\basic.frag">
+      <Filter>programs</Filter>
+    </None>
+    <None Include="shaders\basic.vert">
+      <Filter>programs</Filter>
+    </None>
+    <None Include="shaders\framebuffer.frag">
+      <Filter>programs</Filter>
+    </None>
+    <None Include="shaders\framebuffer.vert">
+      <Filter>programs</Filter>
+    </None>
+    <None Include="shaders\lamp.frag">
+      <Filter>programs</Filter>
+    </None>
+    <None Include="shaders\lamp.vert">
+      <Filter>programs</Filter>
+    </None>
+    <None Include="shaders\material.frag">
+      <Filter>programs</Filter>
+    </None>
+    <None Include="shaders\material.vert">
+      <Filter>programs</Filter>
+    </None>
+    <None Include="shaders\skybox.frag">
+      <Filter>programs</Filter>
+    </None>
+    <None Include="shaders\skybox.vert">
+      <Filter>programs</Filter>
+    </None>
+  </ItemGroup>
+</Project>

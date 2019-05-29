@@ -1,0 +1,5 @@
+# programs
+P 0 shaders/basic.vert shaders/basic.frag
+
+# textures
+T 0 assets/diffuse.png
