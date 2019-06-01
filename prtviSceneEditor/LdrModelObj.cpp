@@ -77,7 +77,7 @@ Mesh LdrModelObj::processMesh(aiMesh * mesh)
 		{
 			glm::vec2 vector2;
 			// vertexes can contain 8 different texture coordinates.
-			// FOr now just take the first set.
+			// For now just take the first set.
 			vector2.x = mesh->mTextureCoords[0][i].x;
 			vector2.y = mesh->mTextureCoords[0][i].y;
 			vertex.texCoords = vector2;

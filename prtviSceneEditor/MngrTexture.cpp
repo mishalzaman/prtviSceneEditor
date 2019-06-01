@@ -18,7 +18,7 @@ void MngrTexture::load()
 	std::string line;
 	std::ifstream file(this->sceneFilename);
 
-	while (std::getline(file, line))
+	while (std::getline(file, line, ','))
 	{
 		if (line.substr(0, 1) == "T")
 		{

@@ -138,6 +138,7 @@
     <ClCompile Include="MngrProgram.cpp" />
     <ClCompile Include="MngrTexture.cpp" />
     <ClCompile Include="openGLSystem\OpenglSystem.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="vendor\easylogging++.cc" />
     <ClCompile Include="vendor\stb_image.cpp" />
@@ -150,6 +151,7 @@
     <ClInclude Include="MngrProgram.h" />
     <ClInclude Include="MngrTexture.h" />
     <ClInclude Include="openGLSystem\OpenglSystem.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="vendor\easylogging++.h" />
     <ClInclude Include="vendor\stb_image.h" />

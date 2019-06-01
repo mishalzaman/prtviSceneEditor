@@ -14,6 +14,7 @@ public:
 	MngrProgram(const char* sceneFilename);
 	~MngrProgram();
 	void load();
+	Shader* getProgram(int id);
 private:
 	std::map<int, Shader*> programs;
 	const char* sceneFilename;

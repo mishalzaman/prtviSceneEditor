@@ -8,7 +8,6 @@ MngrProgram::MngrProgram(const char* sceneFilename)
 	this->sceneFilename = sceneFilename;
 }
 
-
 MngrProgram::~MngrProgram()
 {
 	LOG(INFO) << "MngrProgram::~MngrProgram()";
@@ -26,7 +25,7 @@ void MngrProgram::load()
 	std::string line;
 	std::ifstream file(this->sceneFilename);
 
-	while (std::getline(file, line))
+	while (std::getline(file, line, ','))
 	{
 		if (line.substr(0, 1) == "P")
 		{
@@ -41,4 +40,9 @@ void MngrProgram::load()
 			this->programs[id] = shader;
 		}
 	}
+}
+
+Shader * MngrProgram::getProgram(int id)
+{
+	return this->programs[id];
 }

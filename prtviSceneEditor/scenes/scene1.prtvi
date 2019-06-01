@@ -1,5 +1,12 @@
 # programs
-P 0 shaders/basic.vert shaders/basic.frag
+P,0,shaders/basic.vert,shaders/basic.frag
 
 # textures
-T 0 assets/diffuse.png
+T,0,assets/diffuse.png
+
+# models
+M,0,assets/crate.obj
+
+# entities
+# data_type, id, name, model_id, program_id, texture_id
+E, 0, crate, 0, 0, ,

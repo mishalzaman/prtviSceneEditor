@@ -6,6 +6,8 @@
 #include "MngrProgram.h"
 #include "MngrTexture.h"
 #include "LdrModelObj.h"
+#include "Scene.h"
+#include "Shader.h"
 
 INITIALIZE_EASYLOGGINGPP
 
@@ -76,26 +78,19 @@ int main(int argc, char *argv[])
 	====================================================*/
 
 	const char* sceneFilename = "scenes/scene1.prtvi";
+	bool quit = false;
+	Scene scene = Scene(width, height, sceneFilename);
 
-	Editor editor = Editor{ width, height };
-	editor.load(sceneFilename);
-
-	MngrProgram mngrProgram = MngrProgram{ sceneFilename };
-	mngrProgram.load();
-
-	MngrTexture mngrTexture = MngrTexture{ sceneFilename };
-	mngrTexture.load();
-
-	LdrModelObj ldrModelObj = LdrModelObj{ "assets/crate.obj" };
+	// LdrModelObj ldrModelObj = LdrModelObj{ "assets/crate.obj" };
 
 	/*===================================================
 	Main scene Loop
 	====================================================*/
 
 	LOG(INFO) << "Main() Begin program loop";
-	while (!editor.quit)
+	while (!quit)
 	{
-		editor.quit = true;
+		quit = true;
 	}
 
 	/*===================================================

@@ -1,6 +1,8 @@
 #ifndef EDITOR_H
 #define EDITOR_H
 
+class Scene;
+
 class Editor
 {
 public:
@@ -10,6 +12,9 @@ public:
 	bool quit = false;
 private:
 	const char* sceneFilename;
+	Scene* scene;
+	unsigned int width;
+	unsigned int height;
 };
 
 #endif
