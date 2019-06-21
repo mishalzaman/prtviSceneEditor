@@ -2,7 +2,8 @@
 
 Scene::Scene(unsigned int width, unsigned int height, const char * filename):
 	programs(filename),
-	textures(filename)
+	textures(filename),
+	models(filename)
 {
 	LOG(INFO) << "Scene::Scene()";
 	this->width = width;
@@ -14,6 +15,7 @@ void Scene::load()
 {
 	this->programs.load();
 	this->textures.load();
+	this->models.load();
 }
 
 Scene::~Scene()

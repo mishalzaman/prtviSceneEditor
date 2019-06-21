@@ -2,10 +2,8 @@
 #include <sdl/SDL.h>
 #include "openGLSystem/OpenglSystem.h"
 #include "vendor/easylogging++.h"
-#include "Editor.h"
 #include "MngrProgram.h"
 #include "MngrTexture.h"
-#include "LdrModelObj.h"
 #include "Scene.h"
 #include "Shader.h"
 
@@ -81,7 +79,7 @@ int main(int argc, char *argv[])
 	bool quit = false;
 	Scene scene = Scene(width, height, sceneFilename);
 
-	// LdrModelObj ldrModelObj = LdrModelObj{ "assets/crate.obj" };
+	scene.load();
 
 	/*===================================================
 	Main scene Loop

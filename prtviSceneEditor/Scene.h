@@ -4,6 +4,7 @@
 #include "vendor/easylogging++.h"
 #include "MngrProgram.h"
 #include "MngrTexture.h"
+#include "MngrModel.h"
 
 class Scene
 {
@@ -18,6 +19,7 @@ private:
 	unsigned int height;
 	MngrProgram programs;
 	MngrTexture textures;
+	MngrModel models;
 };
 
 #endif
