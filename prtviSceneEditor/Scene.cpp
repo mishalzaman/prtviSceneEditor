@@ -25,5 +25,6 @@ Scene::~Scene()
 
 Shader* Scene::findProgramById(int id)
 {
+	LOG(INFO) << this->programs.getProgram(id);
 	return this->programs.getProgram(id);
 }

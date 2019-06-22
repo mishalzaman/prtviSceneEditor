@@ -18,21 +18,24 @@ void MngrTexture::load()
 	std::string line;
 	std::ifstream file(this->sceneFilename);
 
-	while (std::getline(file, line, ','))
+	while (std::getline(file, line))
 	{
 		if (line.substr(0, 1) == "T")
 		{
-			std::istringstream iss(line);
-			std::string ignore;
-			int id;
-			std::string image;
+			std::stringstream ss(line);
+			std::vector<std::string> result;
 
-			iss >> ignore >> id >> image;
+			while (ss.good())
+			{
+				std::string substr;
+				getline(ss, substr, ',');
+				result.push_back(substr);
+			}
 
-			LdrTexture texture = LdrTexture(image.c_str());
+			LdrTexture texture = LdrTexture(result[2].c_str());
 			texture.generate();
 
-			this->textures[id] = texture.getTexture();
+			this->textures[std::stoi(result[1])] = texture.getTexture();
 		}
 	}
 }

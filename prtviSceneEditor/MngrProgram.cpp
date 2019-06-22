@@ -25,19 +25,21 @@ void MngrProgram::load()
 	std::string line;
 	std::ifstream file(this->sceneFilename);
 
-	while (std::getline(file, line, ','))
+	while (std::getline(file, line))
 	{
 		if (line.substr(0, 1) == "P")
 		{
-			std::istringstream iss(line);
-			std::string ignore;
-			int id;
-			std::string vertex, fragment;
+			std::stringstream ss(line);
+			std::vector<std::string> result;
 
-			iss >> ignore >> id >> vertex >> fragment;
-			Shader* shader = new Shader{ vertex.c_str(), fragment.c_str() };
-			
-			this->programs[id] = shader;
+			while (ss.good())
+			{
+				std::string substr;
+				getline(ss, substr, ',');
+				result.push_back(substr);
+			}
+			Shader* shader = new Shader{ result[2].c_str(), result[3].c_str() };
+			this->programs[std::stoi(result[1])] = shader;
 		}
 	}
 }

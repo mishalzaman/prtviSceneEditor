@@ -19,39 +19,23 @@ void MngrModel::load()
 	std::string line;
 	std::ifstream file(this->sceneFilename);
 
-	// TODO fix the file reader for comma delimeted files.
-	// Apply to other manager classes.
-
 	while (std::getline(file, line))
 	{
-		if (line.substr(0, 1) == "#")
-		{
-			continue;
-		}
-
 		if (line.substr(0, 1) == "M")
 		{
-			
-			while (std::getline(file, line, ','))
+			std::stringstream ss(line);
+			std::vector<std::string> result;
+
+			while (ss.good())
 			{
-				LOG(INFO) << "MngrModel::load() | LINE: " << line;
+				std::string substr;
+				getline(ss, substr, ',');
+				result.push_back(substr);
 			}
-		}
 
-		if (line.substr(0, 1) == "M")
-		{
-			
-			std::istringstream iss(line);
-			std::string ignore;
-			int id;
-			std::string filename;
+			LdrModelObj ldrModelObj = LdrModelObj(result[2].c_str());
 
-			iss >> ignore >> id >> filename;
-
-			LdrModelObj ldrModelObj = LdrModelObj(filename.c_str());
-
-			this->models[id] = ldrModelObj.getMeshes();
-			LOG(INFO) << "MngrModel::load() | Loaded " << filename;
+			this->models[std::stoi(result[1])] = ldrModelObj.getMeshes();
 		}
 	}
 }
